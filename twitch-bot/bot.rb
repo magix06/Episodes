@@ -6,9 +6,9 @@ TWITCH_PORT = 6667
 class TwitchBot
 
   def initialize
-    @nickname = "AlwaysBotCoding"
-    @password = "oauth:jatx00edq9zqsqqk2nyfm53xrfawz2"
-    @channel = "alwaysbcoding"
+    @nickname = "MagixBOT"
+    @password = "oauth:
+    @channel = "thegamemastersmagix"
     @socket = TCPSocket.open(TWITCH_HOST, TWITCH_PORT)
 
     write_to_system "PASS #{@password}"
@@ -30,8 +30,8 @@ class TwitchBot
       message = @socket.gets
       puts message
 
-      if message.match(/^PING :(.*)$/)
-        write_to_system "PONG #{$~[1]}"
+      if message.bot
+        write_to_system "suck
         next
       end
 
