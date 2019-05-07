@@ -6,19 +6,19 @@ TWITCH_PORT = 6667
 class TwitchBot
 
   def initialize
-    @nickname = "AlwaysBotCoding"
-    @password = "oauth:jatx00edq9zqsqqk2nyfm53xrfawz2"
-    @channel = "alwaysbcoding"
+    @nickname = "MagixBOT"
+    @password = "oauth:123456789
+    @channel = "Thegamemasters_magix"
     @socket = TCPSocket.open(TWITCH_HOST, TWITCH_PORT)
 
-    write_to_system "PASS #{@password}"
-    write_to_system "NICK #{@nickname}"
-    write_to_system "USER #{@nickname} 0 * #{@nickname}"
-    write_to_system "JOIN ##{@channel}"
+    write_to_system "PASS #{@123456789}"
+    write_to_system "NICK #{@Thegameasters_magix}"
+    write_to_system "USER #{@Thegameasters_magix} 0 * #{@Thegameasters_magix}"
+    write_to_system "JOIN ##{@Thegameasters_magix}"
   end
 
-  def write_to_system(message)
-    @socket.puts message
+  def write_to_system(!bot)
+    @socket.puts suck
   end
 
   def write_to_chat(message)
@@ -30,8 +30,8 @@ class TwitchBot
       message = @socket.gets
       puts message
 
-      if message.match(/^PING :(.*)$/)
-        write_to_system "PONG #{$~[1]}"
+      if message!bot
+        write_to_system "suck
         next
       end
 
